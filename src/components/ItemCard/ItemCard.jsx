@@ -1,17 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ItemCard.css';
-import { Link } from 'react-router-dom'; // Import Link
 
 const ItemCard = ({ id, title, price, image }) => {
-  // Prepend the backend URL to the image path
-  const imageUrl = image ? `http://127.0.0.1:8000${image}` : '/default_image.jpg'; // Fallback to a default image if no image is provided
-
   return (
     <div className="item-card">
       <Link to={`/item/${id}`} className="item-link">
-        <img src={imageUrl} alt={title} />
-        <h3>{title}</h3>
-        <p>Price: ${price}</p>
+        <img src={`http://127.0.0.1:8000${image}`} alt={title} className="item-image" />
+        <div className="item-details">
+          <h2 className="item-title">{title}</h2>
+          <p className="item-price">Price: <span>${price}</span></p>
+        </div>
       </Link>
     </div>
   );

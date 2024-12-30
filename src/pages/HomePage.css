@@ -1,0 +1,42 @@
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light background */
+  }
+  
+  /* Page Container */
+  h1 {
+    text-align: center;
+    margin-top: 100px; /* Add space to avoid overlap with navbar */
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  /* Item List Grid */
+  .item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px; /* Center the grid with a maximum width */
+    box-sizing: border-box;
+  }
+  
+  /* Loading/No Products Message */
+  .item-list p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* Add a fallback image style */
+  .item-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensure images fit the card area */
+    border-radius: 8px 8px 0 0;
+  }
+  

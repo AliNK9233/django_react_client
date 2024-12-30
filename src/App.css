@@ -1,0 +1,62 @@
+/* Ensure the body and html fill the entire page */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Ensure the content stacks vertically */
+  }
+  
+  /* Main App container */
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure it takes the full height */
+  }
+  
+  /* Navbar */
+  .navbar {
+    width: 100%;
+    background-color: #333; /* Adjust colors as per your theme */
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  /* Content section (main) */
+  .main-content {
+    flex: 1; /* This ensures the content fills the remaining height */
+    padding: 80px 20px; /* Add padding to avoid overlap with fixed navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Footer */
+  footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    margin-top: auto; /* Pushes footer to the bottom */
+  }
+  
+  /* Scrollbar Styling (optional for aesthetics) */
+  body::-webkit-scrollbar {
+    width: 8px;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
