@@ -3,8 +3,8 @@ import './ItemCard.css';
 import { Link } from 'react-router-dom'; // Import Link
 
 const ItemCard = ({ id, title, price, image }) => {
-  // Prepend the base URL for media to the image path
-  const imageUrl = image ? `${window.location.origin}${image}` : '/default_image.jpg'; // Fallback to a default image if no image is provided
+  // Prepend the backend URL to the image path
+  const imageUrl = image ? `http://127.0.0.1:8000${image}` : '/default_image.jpg'; // Fallback to a default image if no image is provided
 
   return (
     <div className="item-card">
